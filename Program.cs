@@ -11,6 +11,20 @@ namespace MVCResponsiveWebApp
 {
     public class Program
     {
+        public static int AgeThisYear(int yearOfBirth)
+        {
+            int age;
+            if (yearOfBirth >= 1900 && yearOfBirth <= 2021)
+            {
+                int _CURRENTYEAR = 2021;
+                age = _CURRENTYEAR - yearOfBirth;
+            }
+            else
+            {
+                age = 0;
+            }
+            return age;
+        }
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
